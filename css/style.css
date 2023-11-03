@@ -1,0 +1,139 @@
+:root {
+  --primary: rgb(11, 2, 51);
+  --bg: rgb(3, 1, 22);
+  --textshadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    0.1px 0.1px 0 #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary);
+}
+
+/* hero */
+
+.hero {
+  background-image: url(../img/bg2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* hero */
+
+.hero .content {
+  padding: 1rem 6%;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  animation: 3s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.hero .content img {
+  width: 20%;
+  display: block;
+  margin: auto;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.hero .content h1 {
+  color: var(--primary);
+  font-size: 5rem;
+  text-align: center;
+  margin-top: -7rem;
+  text-shadow: var(--textshadow);
+}
+
+.hero .content h2 {
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: var(--textshadow);
+  margin-top: -1rem;
+}
+
+.hero .content p {
+  font-size: 1.4rem;
+  color: #fff;
+  text-shadow: -1px 0 #fff, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-style: italic;
+  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+.hero .content a {
+  color: white;
+  background: var(--primary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid white;
+  cursor: pointer;
+  position: absolute;
+  left: 41.5%;
+}
+
+.hero .content a:hover {
+  color: var(--primary);
+  background: white;
+  border: 1px solid var(--primary);
+  box-shadow: 5px 1px 50px rgb(3, 154, 255), 0px 10px 20px 0 rgb(1, 6, 88),
+    10px 0px 70px 0 rgb(255, 255, 255) inset;
+}
+
+/* media */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 67%;
+  }
+
+  .hero .content img {
+    width: 45%;
+    margin-top: -2rem;
+  }
+
+  .hero .content h1 {
+    font-size: 8rem;
+    margin-top: -4rem;
+  }
+
+  .hero .content p {
+    font-size: 1.8rem;
+    font-weight: 100;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  .hero .content a {
+    left: 28%;
+  }
+}

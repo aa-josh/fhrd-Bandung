@@ -1,0 +1,216 @@
+:root {
+  --primary: rgb(11, 2, 51);
+  --bg: rgb(3, 1, 22);
+  --textshadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    0.1px 0.1px 0 #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary);
+}
+
+.about .img {
+  width: 100%;
+  height: 25vh;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.about .img img {
+  width: 10%;
+  animation: 3s ease-out 0s 1 slideInFromTop;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.about .container {
+  background-color: rgb(177, 177, 179);
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+
+.content {
+  width: 30%;
+  height: 100vh;
+  margin-top: -1rem;
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+  background-color: rgb(228, 228, 255);
+  border-radius: 10px;
+  animation: 3s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1.3rem;
+  font-weight: 700;
+}
+
+.content h5,
+.content h6 {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 100;
+  font-style: italic;
+  padding: 0.2rem 4%;
+}
+
+.content2 {
+  background-color: var(--primary);
+  border-radius: 10px;
+  margin-top: -1rem;
+  height: 100vh;
+  width: 64%;
+  margin-left: 0.5rem;
+  margin-right: 2rem;
+  animation: 3s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromRight {
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(100%);
+  }
+}
+
+.content p {
+  padding: 0.2rem 8%;
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+.content2 h1 {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 1.3rem;
+}
+
+.content2 p {
+  font-size: 1rem;
+  font-weight: 100;
+  color: #fff;
+  padding: 1.1rem 4%;
+}
+
+.content2 a {
+  color: white;
+  background: var(--primary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid white;
+  cursor: pointer;
+  position: absolute;
+  top: 115%;
+  left: 78%;
+}
+
+.content2 a:hover {
+  color: var(--primary);
+  background: white;
+  border: 1px solid var(--primary);
+  box-shadow: 5px 1px 50px rgb(3, 154, 255), 0px 10px 20px 0 rgb(1, 6, 88),
+    10px 0px 70px 0 rgb(255, 255, 255) inset;
+}
+
+/* media */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 67%;
+  }
+
+  .about .img img {
+    width: 28%;
+  }
+
+  .content {
+    width: 93%;
+    height: 80vh;
+    margin-top: -1rem;
+    margin-left: 1.5rem;
+  }
+
+  .content h2,
+  .content h3 {
+    font-size: 2rem;
+  }
+
+  .content h5,
+  .content h6 {
+    font-size: 1.3rem;
+  }
+
+  .content p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-left: 1.3rem;
+  }
+
+  .content2 {
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    height: 110vh;
+    width: 93%;
+  }
+
+  .content2 h1 {
+    font-size: 2rem;
+  }
+
+  .content2 p {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .content2 a {
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+    font-size: 15px;
+    border: 1px solid white;
+    cursor: pointer;
+    position: absolute;
+    top: 210%;
+    left: 32%;
+  }
+}
