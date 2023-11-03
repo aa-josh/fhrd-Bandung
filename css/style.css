@@ -174,7 +174,7 @@ body {
 /* tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 70%;
+    font-size: 75%;
   }
 
   #hamburger-menu {
@@ -215,7 +215,7 @@ body {
 }
 
 /* hp */
-@media (max-width: 425px) {
+@media (max-width: 400px) {
   html {
     font-size: 55%;
   }
@@ -224,10 +224,10 @@ body {
     padding-top: 12rem;
   }
   .hero .content h2 {
-    font-size: 3.9rem;
+    font-size: 3.6rem;
   }
   .hero .content p {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   .hero a {
     font-size: 2rem;
