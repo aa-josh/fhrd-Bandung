@@ -13,14 +13,46 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-  
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/style3.css" />
+  </head>
+
   <body>
+    <!-- navbar Start-->
+    <nav class="navbar">
+      <img src="img/fhrd nav.png" alt="fhrd" />
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="index2.html">Tentang Kami</a>
+        <a href="index3.html">Struktur</a>
+        <a href="diskusi">Diskusi</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- navbar End-->
+
+    <section class="struktur" id="struktur">
+      <div class="content">
+        <h1>Struktur Kepengurusan</h1>
+        <h2>FHRD Kab. Bandung</h2>
+        <h3>Periode 2023 - 2025</h3>
+      </div>
+    </section>
+
     <!-- hero start -->
     <section class="struktur" id="struktur">
-      <h1>hello Word</h1>
-      <a href="index.html#home" id="cta">Kembali Ke Home</a>
-      <a href="index2.html#about" id="cta">Kembali Ke tentang</a>
+      <a href="index.html#home" id="cta">Kembali ke home</a>
     </section>
     <!-- hero end -->
+
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="js/script3.js"></script>
   </body>
 </html>

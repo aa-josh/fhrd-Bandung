@@ -1,6 +1,6 @@
 :root {
   --primary: rgb(11, 2, 51);
-  --bg: rgb(3, 1, 22);
+  --bg: rgb(251, 250, 255);
   --textshadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
     0.1px 0.1px 0 #fff;
 }
@@ -14,12 +14,8 @@
   text-decoration: none;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Edu TAS Beginner", cursive;
   color: var(--primary);
 }
 
@@ -29,8 +25,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2rem 6%;
-  background-color: rgba(255, 255, 255, 0.4);
+  padding: 0.8rem 6%;
+  background-color: rgba(3, 1, 37, 0.3);
   position: fixed;
   top: 0;
   left: 0;
@@ -40,26 +36,31 @@ body {
 }
 
 .navbar img {
-  width: 170px;
+  width: 200px;
+}
+
+.navbar-nav {
+  position: absolute;
+  right: 5%;
 }
 
 .navbar .navbar-nav a {
-  color: var(--bg);
   display: inline-block;
-  font-size: 1.2rem;
+  color: var(--bg);
+  font-size: 2rem;
   margin: 0 0.5rem;
 }
 
 .navbar .navbar-nav a:hover,
 .navbar .navbar-extra a:hover {
-  color: rgb(1, 1, 141);
+  color: rgb(13, 230, 5);
 }
 
 .navbar .navbar-nav a::after {
   content: "";
   display: block;
   padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid rgb(1, 1, 141);
+  border-bottom: 0.1rem solid rgb(13, 230, 5);
   transform: scaleX(0);
   transition: 0.2s linear;
 }
@@ -79,7 +80,7 @@ body {
 /* hero */
 
 .hero {
-  background-image: url(../img/bg2.jpg);
+  background-image: url(../img/tandur.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -108,7 +109,7 @@ body {
 }
 
 .hero .content img {
-  width: 200px;
+  width: 600px;
   display: block;
   margin: auto;
   padding-top: 6rem;
@@ -117,7 +118,7 @@ body {
 
 .hero .content h1 {
   color: var(--primary);
-  font-size: 6rem;
+  font-size: 5rem;
   text-align: center;
   margin-top: -6rem;
   text-shadow: var(--textshadow);
@@ -127,22 +128,23 @@ body {
   font-size: 4rem;
   text-align: center;
   text-shadow: var(--textshadow);
-  margin-top: -2rem;
+  margin-top: -1rem;
 }
 
 .hero .content p {
-  font-size: 2rem;
+  font-size: 2.8rem;
   color: #fff;
-  text-shadow: -1px 0 #fff, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px 0 #fff, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000;
   font-style: italic;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 2.8rem;
+  margin-bottom: 1rem;
   font-weight: 100;
   text-align: center;
 }
 
 .hero a {
   color: white;
+  font-weight: 300;
   background: var(--primary);
   padding: 0.2rem 0.6rem;
   border-radius: 50px;
@@ -165,14 +167,14 @@ body {
 
 /* media */
 /* laptop */
-@media (max-width: 1366px) {
+@media only screen and (max-width: 1024px) {
   html {
-    font-size: 75%;
+    font-size: 90%;
   }
 }
 
 /* tablet */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   html {
     font-size: 75%;
   }
@@ -210,18 +212,25 @@ body {
     transform: scaleX(0.3);
   }
   .hero .content img {
-    width: 170px;
+    padding-top: 9rem;
+    width: 500px;
+  }
+
+  .hero .content p {
+    font-size: 2.5rem;
+    margin-top: 9rem;
   }
 }
 
 /* hp */
-@media (max-width: 400px) {
+@media only screen and (max-width: 425px) {
   html {
     font-size: 55%;
   }
 
   .hero .content img {
     padding-top: 12rem;
+    width: 300px;
   }
   .hero .content h2 {
     font-size: 3.6rem;
@@ -235,7 +244,7 @@ body {
   }
 }
 /* hp small */
-@media (max-width: 375px) {
+@media only screen and (max-width: 375px) {
   html {
     font-size: 50%;
   }
@@ -262,7 +271,7 @@ body {
   }
 }
 /* very small */
-@media (max-width: 320px) {
+@media only screen and (max-width: 320px) {
   html {
     font-size: 50%;
   }
