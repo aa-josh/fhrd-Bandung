@@ -1,31 +1,165 @@
 :root {
-  --primary: rgb(11, 2, 51);
-  --bg: rgb(3, 1, 22);
-  --textshadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
-    0.1px 0.1px 0 #fff;
+  --level-1: #8dccad;
+  --level-2: #f5cc7f;
+  --level-3: #7b9fe0;
+  --level-4: #f27c8d;
+  --black: black;
 }
-
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-decoration: none;
 }
-
-html {
-  scroll-behavior: smooth;
+ol {
+  list-style: none;
 }
-
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: var(--bg);
-  padding: 0.5 4%;
+  margin: 50px 0 100px;
+  text-align: center;
+  font-family: "Edu TAS Beginner", cursive;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.container {
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.rectangle {
+  position: relative;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.content h1 {
+  font-family: "Tangerine";
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 2.5rem;
+}
+
+.content p {
+  font-size: 2rem;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
+/*CUSTOM VARIABLES HERE*/
+.level-1 {
+  width: 20%;
+  margin: 0 auto 40px;
+  background: var(--level-1);
+  border-radius: 8px;
+}
+.level-1::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 118px;
+  background: var(--black);
+}
+
+/*CUSTOM VARIABLES HERE*/
+.level-2-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.level-2-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: var(--black);
+}
+.level-2-wrapper::after {
+  display: none;
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  width: calc(100% + 20px);
+  height: 2px;
+  background: var(--black);
+}
+.level-2-wrapper li {
+  position: relative;
+}
+.level-2-wrapper > li::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+}
+.level-2 {
+  width: 40%;
+  border-radius: 8px;
+  margin: 0 auto 40px;
+  background: var(--level-2);
+}
+.level-2::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 0;
+  background: var(--black);
+}
+.level-2::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-100%, -50%);
+  width: 20px;
+  height: 2px;
+  background: var(--black);
+}
+
+/*CUSTOM VARIABLES HERE*/
+.level-3-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+.level-3-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: calc(25% - 5px);
+  width: calc(50% + 10px);
+  height: 2px;
+  background: var(--black);
+}
+.level-3-wrapper > li::before {
+  content: "";
+  position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+}
+.level-3 {
+  margin-bottom: 20px;
+  background: var(--level-3);
+  border-radius: 8px;
 }
 
 /* navbar */
@@ -34,37 +168,42 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0.6rem 6%;
-  background-color: rgba(0, 0, 12, 1);
+  padding: 0.8rem 6%;
+  background-color: rgba(3, 1, 37, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  backdrop-filter: blur(0.2);
+  backdrop-filter: blur(0.9);
   z-index: 9999;
 }
 
 .navbar img {
-  width: 180px;
+  width: 200px;
+}
+
+.navbar-nav {
+  position: absolute;
+  right: 5%;
 }
 
 .navbar .navbar-nav a {
-  color: rgb(123, 246, 255);
   display: inline-block;
-  font-size: 1.2rem;
+  color: var(--bg);
+  font-size: 2rem;
   margin: 0 0.5rem;
 }
 
 .navbar .navbar-nav a:hover,
 .navbar .navbar-extra a:hover {
-  color: rgb(1, 1, 141);
+  color: rgb(13, 230, 5);
 }
 
 .navbar .navbar-nav a::after {
   content: "";
   display: block;
   padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid rgb(1, 1, 141);
+  border-bottom: 0.1rem solid rgb(13, 230, 5);
   transform: scaleX(0);
   transition: 0.2s linear;
 }
@@ -74,68 +213,25 @@ body {
 }
 
 .navbar .navbar-extra a {
-  color: white;
+  color: var(--bg);
 }
 
 #hamburger-menu {
   display: none;
 }
 
-/* struktur */
-
-.content h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: #fff;
-  padding-top: 7rem;
-}
-
-.content h2 {
-  text-align: center;
-  font-size: 1.7rem;
-  color: #fff;
-  font-weight: 200;
-}
-
-.content h3 {
-  text-align: center;
-  font-size: 2rem;
-  color: #fff;
-  font-weight: 300;
-}
-
-.struktur a {
-  color: white;
-  background: var(--primary);
-  padding: 0.2rem 0.6rem;
-  border-radius: 50px;
-  font-size: 20px;
-  border: 1px solid white;
-  cursor: pointer;
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.struktur a:hover {
-  color: var(--primary);
-  background: white;
-  border: 1px solid var(--primary);
-  box-shadow: 5px 1px 50px rgb(3, 154, 255), 0px 10px 20px 0 rgb(1, 6, 88),
-    10px 0px 70px 0 rgb(255, 255, 255) inset;
-}
+/* hero */
 
 /* media */
 /* laptop */
-@media (max-width: 1366px) {
+@media only screen and (max-width: 1024px) {
   html {
-    font-size: 75%;
+    font-size: 90%;
   }
 }
 
 /* tablet */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   html {
     font-size: 75%;
   }
@@ -172,26 +268,63 @@ body {
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.3);
   }
-  .hero .content img {
-    width: 170px;
+}
+
+@media screen and (max-width: 700px) {
+  .rectangle {
+    padding: 20px 10px;
+  }
+
+  .level-1,
+  .level-2 {
+    width: 100%;
+  }
+
+  .level-1 {
+    margin-bottom: 20px;
+  }
+
+  .level-1::before,
+  .level-2-wrapper > li::before {
+    display: none;
+  }
+
+  .level-2-wrapper,
+  .level-2-wrapper::after,
+  .level-2::after {
+    display: block;
+  }
+
+  .level-2-wrapper {
+    width: 90%;
+    margin-left: 10%;
+  }
+
+  .level-2-wrapper::before {
+    left: -20px;
+    width: 2px;
+    height: calc(100% + 40px);
+  }
+
+  .level-2-wrapper > li:not(:first-child) {
+    margin-top: 50px;
   }
 }
 
 /* hp */
-@media (max-width: 400px) {
+@media only screen and (max-width: 425px) {
   html {
     font-size: 55%;
   }
 }
-
 /* hp small */
-@media (max-width: 375px) {
+@media only screen and (max-width: 375px) {
   html {
     font-size: 50%;
   }
 }
 /* very small */
-@media (max-width: 320px) {
+@media only screen and (max-width: 320px) {
   html {
     font-size: 50%;
   }
