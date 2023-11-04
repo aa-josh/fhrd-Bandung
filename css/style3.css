@@ -321,14 +321,9 @@ body {
 
 /* media */
 /* laptop */
-@media only screen and (max-width: 1024px) {
-  html {
-    font-size: 90%;
-  }
-}
 
 /* tablet */
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   html {
     font-size: 75%;
   }
@@ -405,24 +400,5 @@ body {
 
   .level-2-wrapper > li:not(:first-child) {
     margin-top: 50px;
-  }
-}
-
-/* hp */
-@media only screen and (max-width: 425px) {
-  html {
-    font-size: 55%;
-  }
-}
-/* hp small */
-@media only screen and (max-width: 375px) {
-  html {
-    font-size: 50%;
-  }
-}
-/* very small */
-@media only screen and (max-width: 320px) {
-  html {
-    font-size: 50%;
   }
 }
