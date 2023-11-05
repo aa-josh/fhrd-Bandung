@@ -1,4 +1,9 @@
 :root {
+  --level-1: rgb(100, 185, 58);
+  --level-2: #f5cc7f;
+  --level-3: #7b9fe0;
+  --level-4: #f27c8d;
+  --black: black;
   --primary: rgb(11, 2, 51);
   --bg: rgb(251, 250, 255);
   --textshadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
@@ -36,7 +41,7 @@ body {
 }
 
 .navbar img {
-  width: 200px;
+  width: 50px;
 }
 
 .navbar-nav {
@@ -65,12 +70,8 @@ body {
   transition: 0.2s linear;
 }
 
-.navbar .navbar-nav a:hover::after {
-  transform: scaleX(0.5);
-}
-
-.navbar .navbar-extra a {
-  color: var(--bg);
+.navbar-extra a {
+  color: white;
 }
 
 #hamburger-menu {
@@ -79,19 +80,6 @@ body {
 
 /* RESET STYLES & HELPER CLASSES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-:root {
-  --level-1: #8dccad;
-  --level-2: #f5cc7f;
-  --level-3: #7b9fe0;
-  --level-4: #f27c8d;
-  --black: black;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 ol {
   list-style: none;
@@ -104,14 +92,25 @@ body {
 
 .container {
   max-width: 1000px;
-  padding: 0 10px;
-  margin: 0 auto;
+  padding: 0 20px;
+  margin: 10px auto;
+  padding-top: 2.5rem;
+}
+
+.container .content h2 {
+  font-size: 3rem;
+}
+
+.container .content p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .rectangle {
   position: relative;
   padding: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
 }
 
 /* LEVEL-1 STYLES
@@ -119,7 +118,24 @@ body {
 .level-1 {
   width: 50%;
   margin: 0 auto 40px;
+  padding: 0;
   background: var(--level-1);
+  position: relative;
+}
+
+.level-1 a img {
+  width: 100%;
+  margin-bottom: -2.5rem;
+  border-radius: 8px;
+}
+
+.level-1 a {
+  font-size: 1rem;
+  color: rgb(1, 3, 31);
+}
+
+.level-1 a:hover {
+  color: #f5cc7f;
 }
 
 .level-1::before {
@@ -281,72 +297,28 @@ body {
   background: var(--black);
 }
 
-/* MQ STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (max-width: 700px) {
-  .rectangle {
-    padding: 20px 10px;
-  }
-
-  .level-1,
-  .level-2 {
-    width: 100%;
-  }
-
-  .level-1 {
-    margin-bottom: 20px;
-  }
-
-  .level-1::before,
-  .level-2-wrapper > li::before {
-    display: none;
-  }
-
-  .level-2-wrapper,
-  .level-2-wrapper::after,
-  .level-2::after {
-    display: block;
-  }
-
-  .level-2-wrapper {
-    width: 90%;
-    margin-left: 10%;
-  }
-
-  .level-2-wrapper::before {
-    left: -20px;
-    width: 2px;
-    height: calc(100% + 40px);
-  }
-
-  .level-2-wrapper > li:not(:first-child) {
-    margin-top: 50px;
-  }
-}
-
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-footer {
-  position: fixed;
-  right: 0;
-  bottom: 20px;
-  display: flex;
-  align-items: center;
-  padding: 5px;
+  display: block;
+  margin: auto;
+  padding-top: 5rem;
+  padding-bottom: 5px;
 }
 
 .page-footer a {
   margin-left: 4px;
 }
 
-/* tablet */
+.page-footer img {
+  border-radius: 50%;
+}
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (max-width: 768px) {
   html {
-    font-size: 85%;
-  }
-
-  .navbar img {
-    width: 170px;
+    font-size: 70%;
   }
 
   #hamburger-menu {
@@ -380,5 +352,46 @@ body {
 
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.3);
+  }
+
+  @media screen and (max-width: 700px) {
+    .rectangle {
+      padding: 20px 10px;
+    }
+
+    .level-1,
+    .level-2 {
+      width: 100%;
+    }
+
+    .level-1 {
+      margin-bottom: 20px;
+    }
+
+    .level-1::before,
+    .level-2-wrapper > li::before {
+      display: none;
+    }
+
+    .level-2-wrapper,
+    .level-2-wrapper::after,
+    .level-2::after {
+      display: block;
+    }
+
+    .level-2-wrapper {
+      width: 90%;
+      margin-left: 10%;
+    }
+
+    .level-2-wrapper::before {
+      left: -20px;
+      width: 2px;
+      height: calc(100% + 40px);
+    }
+
+    .level-2-wrapper > li:not(:first-child) {
+      margin-top: 50px;
+    }
   }
 }
