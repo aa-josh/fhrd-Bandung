@@ -1,47 +1,22 @@
 :root {
-  --level-1: #8dccad;
-  --level-2: #f5cc7f;
-  --level-3: #7b9fe0;
-  --level-4: #f27c8d;
-  --black: black;
+  --primary: rgb(11, 2, 51);
+  --bg: rgb(251, 250, 255);
+  --textshadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    0.1px 0.1px 0 #fff;
 }
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
-ol {
-  list-style: none;
-}
+
 body {
-  margin: 50px 0 100px;
-  text-align: center;
   font-family: "Edu TAS Beginner", cursive;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-.container {
-  max-width: 1000px;
-  padding: 0 10px;
-  margin: 0 auto;
-}
-.rectangle {
-  position: relative;
-  padding: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
-
-.content h1 {
-  font-family: "Tangerine";
-  font-size: 4rem;
-  text-align: center;
-  padding-top: 2.5rem;
-}
-
-.content p {
-  font-size: 2rem;
-  margin-top: -1rem;
-  margin-bottom: 1.5rem;
+  color: var(--primary);
 }
 
 /* navbar */
@@ -50,13 +25,13 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 6%;
+  padding: 0.5rem 6%;
   background-color: rgba(3, 1, 37, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  backdrop-filter: blur(0.9);
+  backdrop-filter: blur(1);
   z-index: 9999;
 }
 
@@ -71,10 +46,8 @@ body {
 
 .navbar .navbar-nav a {
   display: inline-block;
-  color: rgb(251, 250, 255);
-  font-size: 2rem;
-  text-decoration: none;
-  font-weight: 200;
+  color: var(--bg);
+  font-size: 1.5rem;
   margin: 0 0.5rem;
 }
 
@@ -97,14 +70,50 @@ body {
 }
 
 .navbar .navbar-extra a {
-  color: rgb(251, 250, 255);
+  color: var(--bg);
 }
 
 #hamburger-menu {
   display: none;
 }
 
-/* Struktur Start */
+/* RESET STYLES & HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --level-1: #8dccad;
+  --level-2: #f5cc7f;
+  --level-3: #7b9fe0;
+  --level-4: #f27c8d;
+  --black: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ol {
+  list-style: none;
+}
+
+body {
+  margin: 50px 0 100px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.rectangle {
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
 /* LEVEL-1 STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .level-1 {
@@ -315,17 +324,29 @@ body {
   }
 }
 
-/* Struktur end */
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
 
-/* hero */
-
-/* media */
-/* laptop */
+.page-footer a {
+  margin-left: 4px;
+}
 
 /* tablet */
 @media screen and (max-width: 768px) {
   html {
-    font-size: 75%;
+    font-size: 85%;
+  }
+
+  .navbar img {
+    width: 170px;
   }
 
   #hamburger-menu {
@@ -359,46 +380,5 @@ body {
 
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.3);
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .rectangle {
-    padding: 20px 10px;
-  }
-
-  .level-1,
-  .level-2 {
-    width: 100%;
-  }
-
-  .level-1 {
-    margin-bottom: 20px;
-  }
-
-  .level-1::before,
-  .level-2-wrapper > li::before {
-    display: none;
-  }
-
-  .level-2-wrapper,
-  .level-2-wrapper::after,
-  .level-2::after {
-    display: block;
-  }
-
-  .level-2-wrapper {
-    width: 90%;
-    margin-left: 10%;
-  }
-
-  .level-2-wrapper::before {
-    left: -20px;
-    width: 2px;
-    height: calc(100% + 40px);
-  }
-
-  .level-2-wrapper > li:not(:first-child) {
-    margin-top: 50px;
   }
 }

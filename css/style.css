@@ -18,6 +18,7 @@ body {
   font-family: "Edu TAS Beginner", cursive;
   color: var(--primary);
   background-color: rgb(58, 52, 52);
+  height: 100vh;
 }
 
 /* navbar */
@@ -37,7 +38,7 @@ body {
 }
 
 .navbar img {
-  width: 200px;
+  width: 170px;
 }
 
 .navbar-nav {
@@ -66,12 +67,8 @@ body {
   transition: 0.2s linear;
 }
 
-.navbar .navbar-nav a:hover::after {
-  transform: scaleX(0.5);
-}
-
-.navbar .navbar-extra a {
-  color: var(--bg);
+.navbar-extra a {
+  color: white;
 }
 
 #hamburger-menu {
@@ -86,9 +83,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
   animation: 2s ease-out 0s 1 slideInFromLeft;
 }
 @keyframes slideInFromLeft {
@@ -109,7 +103,7 @@ body {
 }
 
 .hero .content img {
-  width: 600px;
+  width: 500px;
   display: block;
   margin: auto;
   padding-top: 6rem;
@@ -118,9 +112,9 @@ body {
 
 .hero .content h1 {
   color: var(--primary);
-  font-size: 5rem;
+  font-size: 6.5rem;
   text-align: center;
-  margin-top: -6rem;
+  margin-top: -5rem;
   text-shadow: var(--textshadow);
 }
 
@@ -128,41 +122,18 @@ body {
   font-size: 4rem;
   text-align: center;
   text-shadow: var(--textshadow);
-  margin-top: -1rem;
+  margin-top: 1rem;
 }
 
 .hero .content p {
-  font-size: 2.8rem;
+  font-size: 2.7rem;
   color: #fff;
   text-shadow: -1px 0 #fff, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #000;
   font-style: italic;
-  margin-top: 2.8rem;
+  margin-top: 5rem;
   margin-bottom: 1rem;
   font-weight: 100;
   text-align: center;
-}
-
-.hero a {
-  color: white;
-  font-weight: 300;
-  background: var(--primary);
-  padding: 0.2rem 0.6rem;
-  border-radius: 50px;
-  font-size: 20px;
-  border: 1px solid white;
-  cursor: pointer;
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hero a:hover {
-  color: var(--primary);
-  background: white;
-  border: 1px solid var(--primary);
-  box-shadow: 5px 1px 50px rgb(3, 154, 255), 0px 10px 20px 0 rgb(1, 6, 88),
-    10px 0px 70px 0 rgb(255, 255, 255) inset;
 }
 
 /* media */
@@ -171,7 +142,11 @@ body {
 /* tablet */
 @media screen and (max-width: 768px) {
   html {
-    font-size: 75%;
+    font-size: 70%;
+  }
+
+  .navbar img {
+    width: 150px;
   }
 
   #hamburger-menu {
@@ -206,16 +181,47 @@ body {
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.3);
   }
+
+  .hero .content p {
+    padding-top: 6rem;
+  }
 }
 
-/* hp */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 425px) {
   html {
     font-size: 75%;
   }
 
+  .navbar img {
+    width: 150px;
+  }
   .hero .content img {
     width: 80%;
   }
+  .hero .content h1 {
+    font-size: 5rem;
+  }
+  .hero .content h2 {
+    font-size: 3rem;
+  }
+  .hero .content p {
+    font-size: 2.3rem;
+  }
 }
-/* hp small */
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 55%;
+  }
+
+  .navbar img {
+    width: 140px;
+  }
+  .hero .content img {
+    padding-top: 14rem;
+  }
+  .hero .content p {
+    font-size: 2.7rem;
+    margin-top: 7rem;
+  }
+}
