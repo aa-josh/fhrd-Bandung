@@ -82,7 +82,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   animation: 2s ease-out 0s 1 slideInFromLeft;
 }
 @keyframes slideInFromLeft {
