@@ -17,6 +17,8 @@
 body {
   font-family: "Edu TAS Beginner", cursive;
   color: var(--primary);
+  background-color: #fff;
+  height: 100vh;
 }
 
 /* navbar */
