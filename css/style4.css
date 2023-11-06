@@ -11,13 +11,13 @@
   box-sizing: border-box;
   outline: none;
   border: none;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 body {
   font-family: "Edu TAS Beginner", cursive;
   color: var(--primary);
-  background-color: #fff;
+  background-color: rgb(200, 242, 250);
   height: 100vh;
 }
 
@@ -44,6 +44,7 @@ body {
 .navbar-nav {
   position: absolute;
   right: 5%;
+  display: block;
 }
 
 .navbar .navbar-nav a {
@@ -75,6 +76,38 @@ body {
   display: none;
 }
 /* start */
+.galery .container h1 {
+  text-align: center;
+  margin-top: 6rem;
+  font-weight: 700;
+}
+
+.galery .container h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: -1.8rem;
+}
+
+.galery .container .row {
+  margin: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.galery .container img {
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.row span {
+  font-size: 1.6rem;
+  color: black;
+}
+
+.row span:hover {
+  color: red;
+}
 
 /* media */
 /* laptop */
