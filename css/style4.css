@@ -1,0 +1,151 @@
+:root {
+  --primary: rgb(11, 2, 51);
+  --bg: rgb(251, 250, 255);
+  --textshadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    0.1px 0.1px 0 #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none !important;
+}
+
+body {
+  font-family: "Edu TAS Beginner", cursive;
+  color: var(--primary);
+  background-color: #fff;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 6%;
+  background-color: rgba(3, 1, 37, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(0.9);
+  z-index: 9999;
+}
+
+.navbar img {
+  width: 50px;
+}
+
+.navbar-nav {
+  position: absolute;
+  right: 5%;
+}
+
+.navbar .navbar-nav a {
+  display: inline-block;
+  color: var(--bg);
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-nav a:hover,
+.navbar .navbar-extra a:hover {
+  color: rgb(13, 230, 5);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid rgb(13, 230, 5);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar-extra a {
+  color: white;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* hero */
+
+.container {
+  text-align: center;
+  color: white;
+  background-color: blueviolet;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.container h1 {
+  font-size: 2rem;
+  padding-bottom: 0.7rem;
+}
+.container p {
+  font-size: 1.3rem;
+  padding-bottom: 0.3rem;
+}
+/* media */
+/* laptop */
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 20rem;
+    height: 100vh;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--primary);
+    display: block;
+    margin: 1rem;
+    padding: 0.2rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.3);
+  }
+
+  .hero .content p {
+    padding-top: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 65%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+}
