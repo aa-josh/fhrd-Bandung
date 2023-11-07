@@ -17,7 +17,12 @@
 body {
   font-family: "Edu TAS Beginner", cursive;
   color: var(--primary);
-  background-color: #fff;
+  background-color: rgb(
+    132,
+    0,
+    255
+  ); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, rgb(146, 6, 240), yellow);
 }
 
 /* navbar */
@@ -79,7 +84,7 @@ body {
 
 .container {
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
@@ -101,6 +106,83 @@ body {
 .container .col a:hover {
   color: rgb(250, 28, 28);
 }
+
+.agenda {
+  background-color: rgb(11, 1, 65);
+  color: white;
+  text-align: center;
+  margin: 2rem;
+  padding-bottom: 2rem;
+}
+
+.agenda h1 {
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+
+.agenda img {
+  width: 300px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.agenda h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.agenda p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1rem;
+}
+
+.konfirmasi {
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.konfirmasi h2 {
+  padding-top: 2rem;
+}
+
+.konfirmasi p {
+  padding-bottom: 1rem;
+}
+
+.my-form {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-form label {
+  margin: 5px 10px 5px 0;
+}
+
+.my-form input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.my-form button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+.my-form button:hover {
+  background-color: royalblue;
+}
+
 /* media */
 /* laptop */
 
@@ -145,6 +227,22 @@ body {
 
   .hero .content p {
     padding-top: 4.5rem;
+  }
+
+  .my-form input {
+    margin: 10px 0;
+  }
+
+  .my-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .my-form button {
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
   }
 }
 

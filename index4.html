@@ -51,6 +51,7 @@
               <a
                 href="img/galery/macul.jpeg"
                 data-toggle="lightbox"
+                data-caption="- Peresmian Organisasi -"
                 data-gallery="example-gallery"
               >
                 <img
@@ -58,14 +59,14 @@
                   class="img-fluid"
                   w100
                   rounded
-                />Dokumentasi
+                />
               </a>
             </div>
             <div class="col mt-3">
               <a
                 href="img/galery/macul.jpeg"
                 data-toggle="lightbox"
-                data-caption="This describes the image"
+                data-caption="- panen raya -"
                 data-gallery="example-gallery"
               >
                 <img
@@ -74,14 +75,14 @@
                   class="img-fluid"
                   w-100
                   rounded
-                />Dokumentasi
+                />
               </a>
             </div>
             <div class="col mt-3">
               <a
                 href="img/galery/macul.jpeg"
                 data-toggle="lightbox"
-                data-caption="This describes the image"
+                data-caption="- makan makan -"
                 data-gallery="example-gallery"
               >
                 <img
@@ -90,14 +91,14 @@
                   class="img-fluid"
                   w-100
                   rounded
-                />Dokumentasi
+                />
               </a>
             </div>
             <div class="col mt-3">
               <a
                 href="img/galery/macul.jpeg"
                 data-toggle="lightbox"
-                data-caption="This describes the image"
+                data-caption="- ngabuburit -"
                 data-gallery="example-gallery"
               >
                 <img
@@ -106,14 +107,14 @@
                   class="img-fluid"
                   w-100
                   rounded
-                />Dokumentasi
+                />
               </a>
             </div>
             <div class="col mt-3">
               <a
                 href="img/galery/macul.jpeg"
                 data-toggle="lightbox"
-                data-caption="This describes the image"
+                data-caption="- lebaran -"
                 data-gallery="example-gallery"
               >
                 <img
@@ -122,14 +123,14 @@
                   class="img-fluid"
                   w-100
                   rounded
-                />Dokumentasi
+                />
               </a>
             </div>
             <div class="col mt-3">
               <a
                 href="img/galery/macul.jpeg"
                 data-toggle="lightbox"
-                data-caption="This describes the image"
+                data-caption="- puasa -"
                 data-gallery="example-gallery"
               >
                 <img
@@ -138,11 +139,54 @@
                   class="img-fluid"
                   w-100
                   rounded
-                />Dokumentasi
+                />
               </a>
             </div>
           </div>
         </div>
+      </div>
+      <div class="kegiatan">
+        <div class="agenda">
+          <h1>Agenda Selanjutnya</h1>
+          <img src="img/Untitled-1.png" alt="" />
+          <h3>Peresmian sawah mang dede</h3>
+          <p>Tanggal : 17 agustus 2024</p>
+          <p>di</p>
+          <p>garut</p>
+        </div>
+        <div id="rsvp" class="rsvp"></div>
+      </div>
+      <div class="konfirmasi">
+        <h2>Konfirmasi Kehadiran</h2>
+        <p>Isi Form Dibawah Ini Untuk Melakukan Konfirmasi Kehadiran</p>
+        <form
+          class="my-form"
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycbwJzYj78eoX-_rejWn99D9f84Z0856xI1kAPFwXQqRDuk2eHgT7VvL0R22mI7VzHG4lDg/exec"
+          id="my-form"
+        >
+          <label for="nama" class="form-label">Nama :</label>
+          <input type="text" id="nama" name="nama" />
+          <label for="organisasi" class="form-label">Organisasi:</label>
+          <input type="text" id="organisasi" name="organisasi" />
+          <label for="jumlah" class="form-label">Jumlah Akan Hadir :</label>
+          <input
+            type="number"
+            id="jumlah"
+            name="jumlah"
+            min="1"
+            max="5"
+            length="1"
+            value="1"
+          />
+          <label for="status" class="form-label">Konfirmasi</label>
+          <select name="status" id="status">
+            <option selected>Pilih Salah Satu</option>
+            <option value="hadir">Hadir</option>
+            <option value="tidak hadir">Tidak Hadir</option>
+          </select>
+          <button type="submit">Kirim</button>
+        </form>
       </div>
     </section>
     <script
@@ -155,5 +199,21 @@
       feather.replace();
     </script>
     <script src="js/script4.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        const form = document.getElementById("my-form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: "POST",
+            body: data,
+          }).then(() => {
+            alert("Success!");
+          });
+        });
+      });
+    </script>
   </body>
 </html>
