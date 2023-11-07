@@ -42,6 +42,7 @@ body {
 
 .navbar-nav {
   position: absolute;
+  display: inline-block;
   right: 5%;
 }
 
@@ -78,18 +79,27 @@ body {
 
 .container {
   text-align: center;
-  color: white;
-  background-color: blueviolet;
+  color: rgb(0, 0, 0);
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
 .container h1 {
-  font-size: 2rem;
+  font-size: 2.8rem;
   padding-bottom: 0.7rem;
 }
 .container p {
   font-size: 1.3rem;
-  padding-bottom: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.container .col a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-bottom: 2rem;
+}
+
+.container .col a:hover {
+  color: rgb(250, 28, 28);
 }
 /* media */
 /* laptop */
